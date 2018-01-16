@@ -7,21 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B2FB5DA1FB32DDD00753966 /* BLGlobalMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2FB5D91FB32DDD00753966 /* BLGlobalMacro.swift */; };
+		3B2FB6211FB3317600753966 /* libLet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2FB6201FB3317600753966 /* libLet.a */; };
+		3B2FB6251FB3352F00753966 /* libz.1.2.8.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2FB6241FB3352F00753966 /* libz.1.2.8.tbd */; };
+		3B2FB6271FB3353600753966 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2FB6261FB3353500753966 /* libsqlite3.0.tbd */; };
+		3B7D74051FB096EC00E40B1A /* BL-Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7D74041FB096EC00E40B1A /* BL-Account.storyboard */; };
+		3B7D74071FB0974D00E40B1A /* BLAccountContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D74061FB0974D00E40B1A /* BLAccountContainerViewController.swift */; };
+		3B7D74091FB1E55D00E40B1A /* BLSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D74081FB1E55D00E40B1A /* BLSignInViewController.swift */; };
 		3BA520AF1FAF46AF00DBB2C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA520AE1FAF46AF00DBB2C8 /* AppDelegate.swift */; };
-		3BA520B11FAF46AF00DBB2C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA520B01FAF46AF00DBB2C8 /* ViewController.swift */; };
 		3BA520B41FAF46AF00DBB2C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA520B21FAF46AF00DBB2C8 /* Main.storyboard */; };
 		3BA520B61FAF46AF00DBB2C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA520B51FAF46AF00DBB2C8 /* Assets.xcassets */; };
 		3BA520B91FAF46AF00DBB2C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA520B71FAF46AF00DBB2C8 /* LaunchScreen.storyboard */; };
+		3BA520CA1FAF4EAF00DBB2C8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA520C91FAF4EAF00DBB2C8 /* BaseViewController.swift */; };
+		3BA520CC1FAF4ED900DBB2C8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA520CB1FAF4ED900DBB2C8 /* MainViewController.swift */; };
+		6CEBC71250BB62F3E795C4A0 /* Pods_ihc_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241351678A802FDC2881E996 /* Pods_ihc_swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		241351678A802FDC2881E996 /* Pods_ihc_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ihc_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2FB5D91FB32DDD00753966 /* BLGlobalMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGlobalMacro.swift; sourceTree = "<group>"; };
+		3B2FB5DE1FB32EB700753966 /* BLOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLOAuth.h; sourceTree = "<group>"; };
+		3B2FB5DF1FB32EB700753966 /* BLAllFamilyInfoResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAllFamilyInfoResult.h; sourceTree = "<group>"; };
+		3B2FB5E01FB32EB700753966 /* BLBaseBodyResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLBaseBodyResult.h; sourceTree = "<group>"; };
+		3B2FB5E11FB32EB700753966 /* BLPrivateDataIdResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPrivateDataIdResult.h; sourceTree = "<group>"; };
+		3B2FB5E21FB32EB700753966 /* BLQueryIRCodeParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLQueryIRCodeParams.h; sourceTree = "<group>"; };
+		3B2FB5E31FB32EB700753966 /* BLLet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLLet.h; sourceTree = "<group>"; };
+		3B2FB5E41FB32EB700753966 /* BLFamilyElectricityInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFamilyElectricityInfo.h; sourceTree = "<group>"; };
+		3B2FB5E51FB32EB700753966 /* BLeAirNetWorkDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLeAirNetWorkDataParser.h; sourceTree = "<group>"; };
+		3B2FB5E61FB32EB700753966 /* BLIRCodeDataResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLIRCodeDataResult.h; sourceTree = "<group>"; };
+		3B2FB5E71FB32EB700753966 /* BLModuleControlResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLModuleControlResult.h; sourceTree = "<group>"; };
+		3B2FB5E81FB32EB700753966 /* BLBaseResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLBaseResult.h; sourceTree = "<group>"; };
+		3B2FB5E91FB32EB700753966 /* BLFamilyInvitedQrcodePostResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFamilyInvitedQrcodePostResult.h; sourceTree = "<group>"; };
+		3B2FB5EA1FB32EB700753966 /* BLPairResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPairResult.h; sourceTree = "<group>"; };
+		3B2FB5EB1FB32EB700753966 /* BLUpdateDeviceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLUpdateDeviceResult.h; sourceTree = "<group>"; };
+		3B2FB5EC1FB32EB700753966 /* BLProfileStringResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLProfileStringResult.h; sourceTree = "<group>"; };
+		3B2FB5ED1FB32EB700753966 /* BLFamilyInfoResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFamilyInfoResult.h; sourceTree = "<group>"; };
+		3B2FB5EE1FB32EB700753966 /* BLFamilyMemberInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFamilyMemberInfo.h; sourceTree = "<group>"; };
+		3B2FB5EF1FB32EB700753966 /* BLFamilyIdListGetResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFamilyIdListGetResult.h; sourceTree = "<group>"; };
+		3B2FB5F01FB32EB700753966 /* BLFamilyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFamilyInfo.h; sourceTree = "<group>"; };
+		3B2FB5F11FB32EB700753966 /* BLJSControlEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLJSControlEngine.h; sourceTree = "<group>"; };
+		3B2FB5F21FB32EB700753966 /* BLIRCodeInfoResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLIRCodeInfoResult.h; sourceTree = "<group>"; };
+		3B2FB5F31FB32EB700753966 /* BLTaskDataResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTaskDataResult.h; sourceTree = "<group>"; };
+		3B2FB5F41FB32EB700753966 /* BLSubDevListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSubDevListResult.h; sourceTree = "<group>"; };
+		3B2FB5F51FB32EB700753966 /* BLLoginResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLLoginResult.h; sourceTree = "<group>"; };
+		3B2FB5F61FB32EB700753966 /* BLGetUserPhoneAndEmailResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLGetUserPhoneAndEmailResult.h; sourceTree = "<group>"; };
+		3B2FB5F71FB32EB700753966 /* BLDownloadResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDownloadResult.h; sourceTree = "<group>"; };
+		3B2FB5F81FB32EB700753966 /* BLQueryResourceVersionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLQueryResourceVersionResult.h; sourceTree = "<group>"; };
+		3B2FB5F91FB32EB700753966 /* BLFamilyAllInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFamilyAllInfo.h; sourceTree = "<group>"; };
+		3B2FB5FA1FB32EB700753966 /* BLPrivateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPrivateData.h; sourceTree = "<group>"; };
+		3B2FB5FB1FB32EB700753966 /* BLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLController.h; sourceTree = "<group>"; };
+		3B2FB5FC1FB32EB700753966 /* BLStdData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStdData.h; sourceTree = "<group>"; };
+		3B2FB5FD1FB32EB700753966 /* BLFamilyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFamilyController.h; sourceTree = "<group>"; };
+		3B2FB5FE1FB32EB700753966 /* BLFirmwareVersionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFirmwareVersionResult.h; sourceTree = "<group>"; };
+		3B2FB5FF1FB32EB700753966 /* BLSubDevAddResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSubDevAddResult.h; sourceTree = "<group>"; };
+		3B2FB6001FB32EB700753966 /* BLConfigParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLConfigParam.h; sourceTree = "<group>"; };
+		3B2FB6011FB32EB700753966 /* BLDeviceConfigResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDeviceConfigResult.h; sourceTree = "<group>"; };
+		3B2FB6021FB32EB700753966 /* BLFamilyDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFamilyDeviceInfo.h; sourceTree = "<group>"; };
+		3B2FB6031FB32EB700753966 /* BLFamilyInvitedQrcodeGetResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFamilyInvitedQrcodeGetResult.h; sourceTree = "<group>"; };
+		3B2FB6041FB32EB700753966 /* BLFamilyMemberInfoGetResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFamilyMemberInfoGetResult.h; sourceTree = "<group>"; };
+		3B2FB6051FB32EB700753966 /* BLModuleInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLModuleInfo.h; sourceTree = "<group>"; };
+		3B2FB6061FB32EB700753966 /* BLOauthResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLOauthResult.h; sourceTree = "<group>"; };
+		3B2FB6071FB32EB700753966 /* BLBindDeviceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLBindDeviceResult.h; sourceTree = "<group>"; };
+		3B2FB6081FB32EB700753966 /* BLRoomInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLRoomInfo.h; sourceTree = "<group>"; };
+		3B2FB6091FB32EB700753966 /* BLAPConfigResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAPConfigResult.h; sourceTree = "<group>"; };
+		3B2FB60A1FB32EB700753966 /* BLModuleIncludeDev.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLModuleIncludeDev.h; sourceTree = "<group>"; };
+		3B2FB60B1FB32EB700753966 /* BLDefineRoomTypesResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDefineRoomTypesResult.h; sourceTree = "<group>"; };
+		3B2FB60C1FB32EB700753966 /* BLModifyUserIconResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLModifyUserIconResult.h; sourceTree = "<group>"; };
+		3B2FB60D1FB32EB700753966 /* BLGetUserInfoResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLGetUserInfoResult.h; sourceTree = "<group>"; };
+		3B2FB60E1FB32EB700753966 /* BLPassthroughResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPassthroughResult.h; sourceTree = "<group>"; };
+		3B2FB60F1FB32EB700753966 /* BLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLConstants.h; sourceTree = "<group>"; };
+		3B2FB6101FB32EB700753966 /* BLQueryTaskResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLQueryTaskResult.h; sourceTree = "<group>"; };
+		3B2FB6111FB32EB700753966 /* BLDNAControllerResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDNAControllerResult.h; sourceTree = "<group>"; };
+		3B2FB6121FB32EB700753966 /* BLS1NetWorkDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLS1NetWorkDataParser.h; sourceTree = "<group>"; };
+		3B2FB6131FB32EB700753966 /* BLDNADevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDNADevice.h; sourceTree = "<group>"; };
+		3B2FB6141FB32EB700753966 /* BLGetAPListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLGetAPListResult.h; sourceTree = "<group>"; };
+		3B2FB6151FB32EB700753966 /* BLDeviceTimeResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDeviceTimeResult.h; sourceTree = "<group>"; };
+		3B2FB6161FB32EB700753966 /* BLPrivateDataResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPrivateDataResult.h; sourceTree = "<group>"; };
+		3B2FB6171FB32EB700753966 /* BLManageRoomsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLManageRoomsResult.h; sourceTree = "<group>"; };
+		3B2FB6181FB32EB700753966 /* BLPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPicker.h; sourceTree = "<group>"; };
+		3B2FB6191FB32EB700753966 /* BLFamilyElectricityInfoResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFamilyElectricityInfoResult.h; sourceTree = "<group>"; };
+		3B2FB61A1FB32EB700753966 /* BLFamilyConfigedDevicesResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLFamilyConfigedDevicesResult.h; sourceTree = "<group>"; };
+		3B2FB61B1FB32EB700753966 /* BLAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAccount.h; sourceTree = "<group>"; };
+		3B2FB61C1FB32EB700753966 /* BLStdControlResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStdControlResult.h; sourceTree = "<group>"; };
+		3B2FB61F1FB32F9D00753966 /* Appsdk-Brdging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Appsdk-Brdging-Header.h"; sourceTree = "<group>"; };
+		3B2FB6201FB3317600753966 /* libLet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLet.a; path = Appsdk/libLet.a; sourceTree = SOURCE_ROOT; };
+		3B2FB6221FB334FE00753966 /* BLSubdevBaseResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSubdevBaseResult.h; sourceTree = "<group>"; };
+		3B2FB6231FB334FE00753966 /* BLIRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLIRCode.h; sourceTree = "<group>"; };
+		3B2FB6241FB3352F00753966 /* libz.1.2.8.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.8.tbd; path = usr/lib/libz.1.2.8.tbd; sourceTree = SDKROOT; };
+		3B2FB6261FB3353500753966 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		3B7D74041FB096EC00E40B1A /* BL-Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "BL-Account.storyboard"; sourceTree = "<group>"; };
+		3B7D74061FB0974D00E40B1A /* BLAccountContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLAccountContainerViewController.swift; sourceTree = "<group>"; };
+		3B7D74081FB1E55D00E40B1A /* BLSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLSignInViewController.swift; sourceTree = "<group>"; };
 		3BA520AB1FAF46AF00DBB2C8 /* ihc_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ihc_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA520AE1FAF46AF00DBB2C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3BA520B01FAF46AF00DBB2C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3BA520B31FAF46AF00DBB2C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BA520B51FAF46AF00DBB2C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BA520B81FAF46AF00DBB2C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BA520BA1FAF46AF00DBB2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BA520C91FAF4EAF00DBB2C8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3BA520CB1FAF4ED900DBB2C8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8857D69B18D626A2CED7E35E /* Pods-ihc_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ihc_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ihc_swift/Pods-ihc_swift.debug.xcconfig"; sourceTree = "<group>"; };
+		C6963E438FB1EA4E5DC8B3A3 /* Pods-ihc_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ihc_swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ihc_swift/Pods-ihc_swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +115,124 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CEBC71250BB62F3E795C4A0 /* Pods_ihc_swift.framework in Frameworks */,
+				3B2FB6251FB3352F00753966 /* libz.1.2.8.tbd in Frameworks */,
+				3B2FB6271FB3353600753966 /* libsqlite3.0.tbd in Frameworks */,
+				3B2FB6211FB3317600753966 /* libLet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B2FB5DB1FB32E9C00753966 /* Appsdk */ = {
+			isa = PBXGroup;
+			children = (
+				3B2FB6201FB3317600753966 /* libLet.a */,
+				3B2FB5DC1FB32EB700753966 /* include */,
+			);
+			path = Appsdk;
+			sourceTree = "<group>";
+		};
+		3B2FB5DC1FB32EB700753966 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				3B2FB5DD1FB32EB700753966 /* Let */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		3B2FB5DD1FB32EB700753966 /* Let */ = {
+			isa = PBXGroup;
+			children = (
+				3B2FB6231FB334FE00753966 /* BLIRCode.h */,
+				3B2FB6221FB334FE00753966 /* BLSubdevBaseResult.h */,
+				3B2FB5DE1FB32EB700753966 /* BLOAuth.h */,
+				3B2FB5DF1FB32EB700753966 /* BLAllFamilyInfoResult.h */,
+				3B2FB5E01FB32EB700753966 /* BLBaseBodyResult.h */,
+				3B2FB5E11FB32EB700753966 /* BLPrivateDataIdResult.h */,
+				3B2FB5E21FB32EB700753966 /* BLQueryIRCodeParams.h */,
+				3B2FB5E31FB32EB700753966 /* BLLet.h */,
+				3B2FB5E41FB32EB700753966 /* BLFamilyElectricityInfo.h */,
+				3B2FB5E51FB32EB700753966 /* BLeAirNetWorkDataParser.h */,
+				3B2FB5E61FB32EB700753966 /* BLIRCodeDataResult.h */,
+				3B2FB5E71FB32EB700753966 /* BLModuleControlResult.h */,
+				3B2FB5E81FB32EB700753966 /* BLBaseResult.h */,
+				3B2FB5E91FB32EB700753966 /* BLFamilyInvitedQrcodePostResult.h */,
+				3B2FB5EA1FB32EB700753966 /* BLPairResult.h */,
+				3B2FB5EB1FB32EB700753966 /* BLUpdateDeviceResult.h */,
+				3B2FB5EC1FB32EB700753966 /* BLProfileStringResult.h */,
+				3B2FB5ED1FB32EB700753966 /* BLFamilyInfoResult.h */,
+				3B2FB5EE1FB32EB700753966 /* BLFamilyMemberInfo.h */,
+				3B2FB5EF1FB32EB700753966 /* BLFamilyIdListGetResult.h */,
+				3B2FB5F01FB32EB700753966 /* BLFamilyInfo.h */,
+				3B2FB5F11FB32EB700753966 /* BLJSControlEngine.h */,
+				3B2FB5F21FB32EB700753966 /* BLIRCodeInfoResult.h */,
+				3B2FB5F31FB32EB700753966 /* BLTaskDataResult.h */,
+				3B2FB5F41FB32EB700753966 /* BLSubDevListResult.h */,
+				3B2FB5F51FB32EB700753966 /* BLLoginResult.h */,
+				3B2FB5F61FB32EB700753966 /* BLGetUserPhoneAndEmailResult.h */,
+				3B2FB5F71FB32EB700753966 /* BLDownloadResult.h */,
+				3B2FB5F81FB32EB700753966 /* BLQueryResourceVersionResult.h */,
+				3B2FB5F91FB32EB700753966 /* BLFamilyAllInfo.h */,
+				3B2FB5FA1FB32EB700753966 /* BLPrivateData.h */,
+				3B2FB5FB1FB32EB700753966 /* BLController.h */,
+				3B2FB5FC1FB32EB700753966 /* BLStdData.h */,
+				3B2FB5FD1FB32EB700753966 /* BLFamilyController.h */,
+				3B2FB5FE1FB32EB700753966 /* BLFirmwareVersionResult.h */,
+				3B2FB5FF1FB32EB700753966 /* BLSubDevAddResult.h */,
+				3B2FB6001FB32EB700753966 /* BLConfigParam.h */,
+				3B2FB6011FB32EB700753966 /* BLDeviceConfigResult.h */,
+				3B2FB6021FB32EB700753966 /* BLFamilyDeviceInfo.h */,
+				3B2FB6031FB32EB700753966 /* BLFamilyInvitedQrcodeGetResult.h */,
+				3B2FB6041FB32EB700753966 /* BLFamilyMemberInfoGetResult.h */,
+				3B2FB6051FB32EB700753966 /* BLModuleInfo.h */,
+				3B2FB6061FB32EB700753966 /* BLOauthResult.h */,
+				3B2FB6071FB32EB700753966 /* BLBindDeviceResult.h */,
+				3B2FB6081FB32EB700753966 /* BLRoomInfo.h */,
+				3B2FB6091FB32EB700753966 /* BLAPConfigResult.h */,
+				3B2FB60A1FB32EB700753966 /* BLModuleIncludeDev.h */,
+				3B2FB60B1FB32EB700753966 /* BLDefineRoomTypesResult.h */,
+				3B2FB60C1FB32EB700753966 /* BLModifyUserIconResult.h */,
+				3B2FB60D1FB32EB700753966 /* BLGetUserInfoResult.h */,
+				3B2FB60E1FB32EB700753966 /* BLPassthroughResult.h */,
+				3B2FB60F1FB32EB700753966 /* BLConstants.h */,
+				3B2FB6101FB32EB700753966 /* BLQueryTaskResult.h */,
+				3B2FB6111FB32EB700753966 /* BLDNAControllerResult.h */,
+				3B2FB6121FB32EB700753966 /* BLS1NetWorkDataParser.h */,
+				3B2FB6131FB32EB700753966 /* BLDNADevice.h */,
+				3B2FB6141FB32EB700753966 /* BLGetAPListResult.h */,
+				3B2FB6151FB32EB700753966 /* BLDeviceTimeResult.h */,
+				3B2FB6161FB32EB700753966 /* BLPrivateDataResult.h */,
+				3B2FB6171FB32EB700753966 /* BLManageRoomsResult.h */,
+				3B2FB6181FB32EB700753966 /* BLPicker.h */,
+				3B2FB6191FB32EB700753966 /* BLFamilyElectricityInfoResult.h */,
+				3B2FB61A1FB32EB700753966 /* BLFamilyConfigedDevicesResult.h */,
+				3B2FB61B1FB32EB700753966 /* BLAccount.h */,
+				3B2FB61C1FB32EB700753966 /* BLStdControlResult.h */,
+			);
+			path = Let;
+			sourceTree = "<group>";
+		};
+		3B7D74031FB0968D00E40B1A /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				3B7D74041FB096EC00E40B1A /* BL-Account.storyboard */,
+				3B7D74061FB0974D00E40B1A /* BLAccountContainerViewController.swift */,
+				3B7D74081FB1E55D00E40B1A /* BLSignInViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		3BA520A21FAF46AF00DBB2C8 = {
 			isa = PBXGroup;
 			children = (
+				3B2FB61F1FB32F9D00753966 /* Appsdk-Brdging-Header.h */,
+				3B2FB5DB1FB32E9C00753966 /* Appsdk */,
 				3BA520AD1FAF46AF00DBB2C8 /* ihc_swift */,
 				3BA520AC1FAF46AF00DBB2C8 /* Products */,
+				7AEECEF69D9C80D1698CB7EE /* Pods */,
+				D98C8C4E8131A464905ABC23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +247,68 @@
 		3BA520AD1FAF46AF00DBB2C8 /* ihc_swift */ = {
 			isa = PBXGroup;
 			children = (
-				3BA520AE1FAF46AF00DBB2C8 /* AppDelegate.swift */,
-				3BA520B01FAF46AF00DBB2C8 /* ViewController.swift */,
-				3BA520B21FAF46AF00DBB2C8 /* Main.storyboard */,
-				3BA520B51FAF46AF00DBB2C8 /* Assets.xcassets */,
-				3BA520B71FAF46AF00DBB2C8 /* LaunchScreen.storyboard */,
+				3BA520C21FAF4CAD00DBB2C8 /* Common */,
+				3BA520C01FAF4C5E00DBB2C8 /* Sessions */,
+				3BA520C41FAF4CE800DBB2C8 /* Resources */,
 				3BA520BA1FAF46AF00DBB2C8 /* Info.plist */,
 			);
 			path = ihc_swift;
+			sourceTree = "<group>";
+		};
+		3BA520C01FAF4C5E00DBB2C8 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				3BA520C91FAF4EAF00DBB2C8 /* BaseViewController.swift */,
+				3B7D74031FB0968D00E40B1A /* Account */,
+				3BA520C31FAF4CC700DBB2C8 /* Main */,
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
+		3BA520C21FAF4CAD00DBB2C8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3BA520AE1FAF46AF00DBB2C8 /* AppDelegate.swift */,
+				3B2FB5D91FB32DDD00753966 /* BLGlobalMacro.swift */,
+				3BA520B21FAF46AF00DBB2C8 /* Main.storyboard */,
+				3BA520B71FAF46AF00DBB2C8 /* LaunchScreen.storyboard */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3BA520C31FAF4CC700DBB2C8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3BA520CB1FAF4ED900DBB2C8 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3BA520C41FAF4CE800DBB2C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3BA520B51FAF46AF00DBB2C8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7AEECEF69D9C80D1698CB7EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8857D69B18D626A2CED7E35E /* Pods-ihc_swift.debug.xcconfig */,
+				C6963E438FB1EA4E5DC8B3A3 /* Pods-ihc_swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D98C8C4E8131A464905ABC23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B2FB6261FB3353500753966 /* libsqlite3.0.tbd */,
+				3B2FB6241FB3352F00753966 /* libz.1.2.8.tbd */,
+				241351678A802FDC2881E996 /* Pods_ihc_swift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +318,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BA520BD1FAF46AF00DBB2C8 /* Build configuration list for PBXNativeTarget "ihc_swift" */;
 			buildPhases = (
+				E84BCC977BC064664CBF63E8 /* [CP] Check Pods Manifest.lock */,
 				3BA520A71FAF46AF00DBB2C8 /* Sources */,
 				3BA520A81FAF46AF00DBB2C8 /* Frameworks */,
 				3BA520A91FAF46AF00DBB2C8 /* Resources */,
+				4C4DC6BFC8BE996301AC3F88 /* [CP] Embed Pods Frameworks */,
+				07505298AC29EA9F19AAE6A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B7D74051FB096EC00E40B1A /* BL-Account.storyboard in Resources */,
 				3BA520B91FAF46AF00DBB2C8 /* LaunchScreen.storyboard in Resources */,
 				3BA520B61FAF46AF00DBB2C8 /* Assets.xcassets in Resources */,
 				3BA520B41FAF46AF00DBB2C8 /* Main.storyboard in Resources */,
@@ -131,13 +382,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07505298AC29EA9F19AAE6A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ihc_swift/Pods-ihc_swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C4DC6BFC8BE996301AC3F88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ihc_swift/Pods-ihc_swift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ihc_swift/Pods-ihc_swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E84BCC977BC064664CBF63E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ihc_swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3BA520A71FAF46AF00DBB2C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BA520B11FAF46AF00DBB2C8 /* ViewController.swift in Sources */,
+				3BA520CC1FAF4ED900DBB2C8 /* MainViewController.swift in Sources */,
 				3BA520AF1FAF46AF00DBB2C8 /* AppDelegate.swift in Sources */,
+				3B7D74091FB1E55D00E40B1A /* BLSignInViewController.swift in Sources */,
+				3B7D74071FB0974D00E40B1A /* BLAccountContainerViewController.swift in Sources */,
+				3BA520CA1FAF4EAF00DBB2C8 /* BaseViewController.swift in Sources */,
+				3B2FB5DA1FB32DDD00753966 /* BLGlobalMacro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,31 +593,83 @@
 		};
 		3BA520BE1FAF46AF00DBB2C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8857D69B18D626A2CED7E35E /* Pods-ihc_swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LNK67AT9N9;
+				DEVELOPMENT_TEAM = HY3APXQW82;
 				INFOPLIST_FILE = ihc_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.broadlink.ihc-swift";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ihc_swift/ThirdLibrary/Appsdk",
+					"$(PROJECT_DIR)/Appsdk",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"FSPagerView\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.econtrol.plus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Appsdk-Brdging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		3BA520BF1FAF46AF00DBB2C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6963E438FB1EA4E5DC8B3A3 /* Pods-ihc_swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LNK67AT9N9;
+				DEVELOPMENT_TEAM = HY3APXQW82;
 				INFOPLIST_FILE = ihc_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.broadlink.ihc-swift";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ihc_swift/ThirdLibrary/Appsdk",
+					"$(PROJECT_DIR)/Appsdk",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"FSPagerView\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.econtrol.plus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Appsdk-Brdging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
