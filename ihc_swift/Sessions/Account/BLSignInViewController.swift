@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class BLSignInViewController: BaseViewController {
 
@@ -14,6 +15,7 @@ class BLSignInViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.custom)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,16 +27,21 @@ class BLSignInViewController: BaseViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func loginButtonClick(_ sender: UIButton) {
+        phoneTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        
         let phone = phoneTextField.text
         let password = passwordTextField.text
         
         let blLet = BLLet.shared()
+        
+        SVProgressHUD.show(withStatus: "正在加载...")
         blLet?.account.login(phone!, password: password!, completionHandler: { (result) in
             print("Login Error:\(result.error) Msg:\(result.msg)")
-            
+            SVProgressHUD.dismiss()
             if result.succeed() {
                 // 跳转到主页面
-                
+                BLAccountService.sharedInstance.login()
             }
         })
     }

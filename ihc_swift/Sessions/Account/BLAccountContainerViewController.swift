@@ -32,6 +32,12 @@ class BLAccountContainerViewController: BaseViewController,FSPagerViewDataSource
     
     @IBOutlet weak var showView: UIView!
     
+    class func viewController() -> BLAccountContainerViewController {
+        let vc = UIStoryboard.init(name: "BL-Account", bundle: nil).instantiateViewController(withIdentifier: "BLAccountContainerViewController")
+        
+        return vc as! BLAccountContainerViewController;
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -57,12 +63,6 @@ class BLAccountContainerViewController: BaseViewController,FSPagerViewDataSource
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    class func viewController() -> BLAccountContainerViewController {
-        let vc = UIStoryboard.init(name: "BL-Account", bundle: nil).instantiateViewController(withIdentifier: "BLAccountContainerViewController")
-        
-        return vc as! BLAccountContainerViewController;
     }
     
     func viewInit() -> Void {

@@ -9,6 +9,7 @@
 #ifndef Appsdk_Brdging_Header_h
 #define Appsdk_Brdging_Header_h
 
-#import "BLLet.h"
+#import "BLLetCore/BLLetCore.h"
+#import "SVProgressHUD/SVProgressHUD.h"
 
 #endif /* Appsdk_Brdging_Header_h */

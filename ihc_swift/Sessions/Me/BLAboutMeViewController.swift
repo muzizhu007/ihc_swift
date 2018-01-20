@@ -1,16 +1,21 @@
 //
-//  BaseViewController.swift
+//  BLAboutMeViewController.swift
 //  ihc_swift
 //
-//  Created by zjjllj on 2017/11/5.
-//  Copyright © 2017年 zjjllj. All rights reserved.
+//  Created by zhujunjie on 2018/1/19.
+//  Copyright © 2018年 zjjllj. All rights reserved.
 //
 
 import UIKit
 
+class BLAboutMeViewController: BaseViewController {
 
-class BaseViewController: UIViewController {
-
+    class func viewController() -> BLAboutMeViewController {
+        let vc = UIStoryboard.init(name: "BL-Me", bundle: nil).instantiateViewController(withIdentifier: "BLAboutMeViewController")
+        
+        return vc as! BLAboutMeViewController;
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +27,7 @@ class BaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     /*
     // MARK: - Navigation
 
@@ -32,6 +38,4 @@ class BaseViewController: UIViewController {
     }
     */
 
-    
-    
 }
