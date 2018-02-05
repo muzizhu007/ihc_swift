@@ -6,16 +6,19 @@
 //  Copyright © 2018年 zjjllj. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class BLFamilyService: NSObject {
     
     var currentFamilyId : String?
     var currentFamilyVersion : String?
     
+    var allFamilyInfoList : [BLFamilyIdInfo]?
     var familyBaseInfo : BLFamilyInfo?
     var roomInfoList : [BLRoomInfo]?
     var moduleInfoList : [BLModuleInfo]?
+    var deviceInfoList : [BLFamilyDeviceInfo]?
+    var subdevInfoList : [BLFamilyDeviceInfo]?
     
     static let sharedInstance = BLFamilyService()
     private override init() {}
@@ -25,17 +28,28 @@ class BLFamilyService: NSObject {
         BLLet.shared()?.familyManager.queryLoginUserFamilyIdList { (result) in
             var needQuery = false
             if (result.succeed()) {
+                
                 if let idlist = result.idList {
-                    let familyInfo = idlist.first
+                    self.allFamilyInfoList = result.idList
                     
-                    //获取第一个家庭
-                    self.currentFamilyId = familyInfo?.familyId
-                    
-                    if self.currentFamilyVersion != familyInfo?.familyVersion {
+                    if self.currentFamilyId == nil {
+                        //获取第一个家庭
+                        let familyInfo = idlist.first
+                        self.currentFamilyId = familyInfo?.familyId
                         self.currentFamilyVersion = familyInfo?.familyVersion
                         needQuery = true
+                    } else {
+                        
+                        for familyInfo in result.idList {
+                            if self.currentFamilyId == familyInfo.familyId {
+                                if self.currentFamilyVersion != familyInfo.familyVersion {
+                                    self.currentFamilyVersion = familyInfo.familyVersion
+                                    needQuery = true
+                                    break
+                                }
+                            }
+                        }
                     }
-                    
                 }
             } else {
                 print("Failed Msg: \(result.msg) Status : \(result.error)")
@@ -53,7 +67,10 @@ class BLFamilyService: NSObject {
                 self.familyBaseInfo = familyAllInfo?.familyBaseInfo
                 self.roomInfoList = familyAllInfo?.roomBaseInfoArray
                 self.moduleInfoList = familyAllInfo?.moduleBaseInfo
+                self.deviceInfoList = familyAllInfo?.deviceBaseInfo
+                self.subdevInfoList = familyAllInfo?.subDeviceBaseInfo
                 
+                BLDeviceService.sharedInstance.updateLocalDevices()
             } else {
                 print("Failed Msg: \(result.msg) Status : \(result.error)")
             }

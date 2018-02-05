@@ -18,12 +18,17 @@ class MainViewController: UITabBarController {
         vc.setTabBarItem(item: fc.tabBarItem, title: "家", image: "tab_home_normal", selected_image: "tab_home_selected")
         vc.addChildViewController(fc)
         
+        let deviceVC = BLDeviceListViewController.viewController()
+        let dc = UINavigationController(rootViewController: deviceVC)
+        vc.setTabBarItem(item: dc.tabBarItem, title: "设备", image: "tab_device_normal", selected_image: "tab_device_selected")
+        vc.addChildViewController(dc)
+        
         let meVC = BLAboutMeViewController.viewController()
         let mc = UINavigationController(rootViewController: meVC)
         vc.setTabBarItem(item: mc.tabBarItem, title: "我", image: "tab_me_normal", selected_image: "tab_me_selected")
         vc.addChildViewController(mc)
 
-        let controllers = [fc, mc]
+        let controllers = [fc, dc, mc]
         vc.viewControllers = controllers
         return vc;
     }

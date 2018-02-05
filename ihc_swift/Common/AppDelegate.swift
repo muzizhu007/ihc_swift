@@ -49,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func appsdkInit() -> Void {
         blLet = BLLet.sharedLet(withLicense: kAppsdkLicense)
         blLet?.debugLog = BLDebugLevelEnum(rawValue: 3)!
+        blLet?.controller.startProbe()
     }
 }
 

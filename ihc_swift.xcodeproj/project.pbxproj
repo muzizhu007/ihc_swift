@@ -24,6 +24,10 @@
 		701011FD2011E92400337A98 /* BLFamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701011FC2011E92400337A98 /* BLFamilyViewController.swift */; };
 		701011FF2011EC1300337A98 /* BL-Family.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 701011FE2011EC1300337A98 /* BL-Family.storyboard */; };
 		701012012011EED400337A98 /* BL-Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 701012002011EED400337A98 /* BL-Me.storyboard */; };
+		704A3A7F2021722A00FB2C9C /* BLJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3A7E2021722A00FB2C9C /* BLJSBridge.swift */; };
+		704A3A962024394C00FB2C9C /* BLDeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3A952024394C00FB2C9C /* BLDeviceListViewController.swift */; };
+		704A3A98202439AC00FB2C9C /* BL-Device.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 704A3A97202439AC00FB2C9C /* BL-Device.storyboard */; };
+		704A3A9A2024436500FB2C9C /* BLDeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3A992024436500FB2C9C /* BLDeviceService.swift */; };
 		70606D7920103FBC008A7BF1 /* BLFamilyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70606D7820103FBC008A7BF1 /* BLFamilyService.swift */; };
 		70606D7B201058C0008A7BF1 /* BLAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70606D7A201058C0008A7BF1 /* BLAccountService.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +53,10 @@
 		701011FC2011E92400337A98 /* BLFamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLFamilyViewController.swift; sourceTree = "<group>"; };
 		701011FE2011EC1300337A98 /* BL-Family.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "BL-Family.storyboard"; sourceTree = "<group>"; };
 		701012002011EED400337A98 /* BL-Me.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "BL-Me.storyboard"; sourceTree = "<group>"; };
+		704A3A7E2021722A00FB2C9C /* BLJSBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLJSBridge.swift; sourceTree = "<group>"; };
+		704A3A952024394C00FB2C9C /* BLDeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLDeviceListViewController.swift; sourceTree = "<group>"; };
+		704A3A97202439AC00FB2C9C /* BL-Device.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "BL-Device.storyboard"; sourceTree = "<group>"; };
+		704A3A992024436500FB2C9C /* BLDeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLDeviceService.swift; sourceTree = "<group>"; };
 		70606D7820103FBC008A7BF1 /* BLFamilyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLFamilyService.swift; sourceTree = "<group>"; };
 		70606D7A201058C0008A7BF1 /* BLAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLAccountService.swift; sourceTree = "<group>"; };
 		8857D69B18D626A2CED7E35E /* Pods-ihc_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ihc_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ihc_swift/Pods-ihc_swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +110,7 @@
 		3BA520AD1FAF46AF00DBB2C8 /* ihc_swift */ = {
 			isa = PBXGroup;
 			children = (
+				704A3A7D20216FAF00FB2C9C /* JSBridge */,
 				3BA520C21FAF4CAD00DBB2C8 /* Common */,
 				3BA520C01FAF4C5E00DBB2C8 /* Sessions */,
 				3BA520C41FAF4CE800DBB2C8 /* Resources */,
@@ -114,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				3BA520C91FAF4EAF00DBB2C8 /* BaseViewController.swift */,
+				704A3A942024391900FB2C9C /* Device */,
 				701011F92011E68400337A98 /* Me */,
 				70606D7720103F88008A7BF1 /* Family */,
 				3B7D74031FB0968D00E40B1A /* Account */,
@@ -156,6 +166,24 @@
 				701012002011EED400337A98 /* BL-Me.storyboard */,
 			);
 			path = Me;
+			sourceTree = "<group>";
+		};
+		704A3A7D20216FAF00FB2C9C /* JSBridge */ = {
+			isa = PBXGroup;
+			children = (
+				704A3A7E2021722A00FB2C9C /* BLJSBridge.swift */,
+			);
+			path = JSBridge;
+			sourceTree = "<group>";
+		};
+		704A3A942024391900FB2C9C /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				704A3A992024436500FB2C9C /* BLDeviceService.swift */,
+				704A3A952024394C00FB2C9C /* BLDeviceListViewController.swift */,
+				704A3A97202439AC00FB2C9C /* BL-Device.storyboard */,
+			);
+			path = Device;
 			sourceTree = "<group>";
 		};
 		70606D7720103F88008A7BF1 /* Family */ = {
@@ -252,6 +280,7 @@
 				3B7D74051FB096EC00E40B1A /* BL-Account.storyboard in Resources */,
 				3BA520B91FAF46AF00DBB2C8 /* LaunchScreen.storyboard in Resources */,
 				3BA520B61FAF46AF00DBB2C8 /* Assets.xcassets in Resources */,
+				704A3A98202439AC00FB2C9C /* BL-Device.storyboard in Resources */,
 				701011FF2011EC1300337A98 /* BL-Family.storyboard in Resources */,
 				701012012011EED400337A98 /* BL-Me.storyboard in Resources */,
 				3BA520B41FAF46AF00DBB2C8 /* Main.storyboard in Resources */,
@@ -335,13 +364,16 @@
 			files = (
 				701011FB2011E6B600337A98 /* BLAboutMeViewController.swift in Sources */,
 				70606D7920103FBC008A7BF1 /* BLFamilyService.swift in Sources */,
+				704A3A9A2024436500FB2C9C /* BLDeviceService.swift in Sources */,
 				3BA520CC1FAF4ED900DBB2C8 /* MainViewController.swift in Sources */,
 				3BA520AF1FAF46AF00DBB2C8 /* AppDelegate.swift in Sources */,
+				704A3A962024394C00FB2C9C /* BLDeviceListViewController.swift in Sources */,
 				701011FD2011E92400337A98 /* BLFamilyViewController.swift in Sources */,
 				3B7D74091FB1E55D00E40B1A /* BLSignInViewController.swift in Sources */,
 				3B7D74071FB0974D00E40B1A /* BLAccountContainerViewController.swift in Sources */,
 				70606D7B201058C0008A7BF1 /* BLAccountService.swift in Sources */,
 				3BA520CA1FAF4EAF00DBB2C8 /* BaseViewController.swift in Sources */,
+				704A3A7F2021722A00FB2C9C /* BLJSBridge.swift in Sources */,
 				3B2FB5DA1FB32DDD00753966 /* BLGlobalMacro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@ import UIKit
 import SVProgressHUD
 import Kingfisher
 
-class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate {
+class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var moduleCollectionView: UICollectionView!
     
@@ -42,6 +42,11 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named : "navi_bg"), for: .default)
         
+        var rightImg = UIImage(named: "icon_add")
+        rightImg = rightImg?.withRenderingMode(.alwaysOriginal)
+        let rightItem = UIBarButtonItem(image: rightImg, style: .plain, target: self, action: #selector(BLFamilyViewController.popRightItemView(_:)))
+        self.navigationItem.rightBarButtonItem = rightItem
+        
         let flowLayout = UICollectionViewFlowLayout();
         self.moduleCollectionView.collectionViewLayout = flowLayout
         self.moduleCollectionView.delegate = self
@@ -59,11 +64,19 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
         // Dispose of any resources that can be recreated.
     }
     
+    //修改左上角显示item
+    private func updateLeftBarItem() {
+        let leftItem = UIBarButtonItem(title: BLFamilyService.sharedInstance.familyBaseInfo?.familyName, style: UIBarButtonItemStyle.plain, target: self, action: #selector(BLFamilyViewController.popLeftItemView(_:)))
+        leftItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:UIColor.white], for: UIControlState.normal)
+        self.navigationItem.leftBarButtonItem = leftItem
+    }
+    
     //更新家庭信息页面
     private func updateFamilyView() {
         BLFamilyService.sharedInstance.queryCurrentFamilyAllInfo { (ret, msg) in
             if ret {
                 DispatchQueue.main.async {
+                    self.updateLeftBarItem()
                     self.moduleCollectionView.reloadData()
                 }
             }
@@ -96,6 +109,84 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
         alert.addAction(confirmAction)
         alert.addAction(cancelAction)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    //item 对应的长按事件
+    @objc private func collectionViewLongGesture(_ gesture : UILongPressGestureRecognizer) {
+        switch gesture.state {
+        case .began:
+            let item = gesture.view?.tag
+            self.deleteFamilyModuleView(item: item!)
+        default:
+            break
+        }
+    }
+    
+    //右上角弹出页面
+    @objc private func popRightItemView(_ sender: Any) {
+        let vc = UIViewController()
+        vc.modalPresentationStyle = .popover
+        vc.preferredContentSize = CGSize(width: 100, height: 50)
+        
+        let addDeviceBtn = UIButton(frame: CGRect(x: 10, y: 15, width: 80, height: 20))
+        addDeviceBtn.tag = 101
+        addDeviceBtn.addTarget(self, action: #selector(BLFamilyViewController.buttonClick(_:)), for: UIControlEvents.touchUpInside)
+        addDeviceBtn.setTitle("添加设备", for: UIControlState.normal)
+        addDeviceBtn.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
+        
+        vc.view.addSubview(addDeviceBtn)
+        
+        let ppc = vc.popoverPresentationController
+        ppc?.permittedArrowDirections = .any
+        ppc?.delegate = self as UIPopoverPresentationControllerDelegate
+        ppc?.barButtonItem = navigationItem.rightBarButtonItem
+        ppc?.sourceView = sender as? UIView
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
+    //左上角弹出页面
+    @objc private func popLeftItemView(_ sender: Any) {
+        let allFamilyIdList = BLFamilyService.sharedInstance.allFamilyInfoList!
+        let vc = UIViewController()
+        vc.modalPresentationStyle = .popover
+        vc.preferredContentSize = CGSize(width: 100, height: 20 + 30 * allFamilyIdList.count)
+        
+        for (index, _) in allFamilyIdList.enumerated() {
+            
+            let familyBtn = UIButton(frame: CGRect(x: 10, y: 15 + 30 * index, width: 80, height: 20))
+            familyBtn.tag = 200 + index
+            familyBtn.addTarget(self, action: #selector(BLFamilyViewController.buttonClick(_:)), for: UIControlEvents.touchUpInside)
+            familyBtn.setTitle("家庭 \(index)", for: UIControlState.normal)
+            familyBtn.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
+            
+            vc.view.addSubview(familyBtn)
+        }
+        
+        let ppc = vc.popoverPresentationController
+        ppc?.permittedArrowDirections = .any
+        ppc?.delegate = self as UIPopoverPresentationControllerDelegate
+        ppc?.barButtonItem = navigationItem.leftBarButtonItem
+        ppc?.sourceView = sender as? UIView
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
+    //按钮点击事件
+    @objc private func buttonClick(_ sender: UIButton) {
+        print("button tag : \(sender.tag)")
+        
+        switch sender.tag {
+        case 101:
+            print("添加设备")
+        case 200..<300:
+            let index = sender.tag - 200
+            BLFamilyService.sharedInstance.currentFamilyId = BLFamilyService.sharedInstance.allFamilyInfoList![index].familyId
+            updateFamilyView()
+        default:
+            break
+        }
+        
     }
     
     //每个分区的内边距
@@ -162,15 +253,7 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
     
     }
     
-    //item 对应的长按事件
-    @objc func collectionViewLongGesture(_ gesture : UILongPressGestureRecognizer) {
-        switch gesture.state {
-        case .began:
-            let item = gesture.view?.tag
-            self.deleteFamilyModuleView(item: item!)
-        default:
-            break
-        }
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
-    
 }
