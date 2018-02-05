@@ -123,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				3BA520C91FAF4EAF00DBB2C8 /* BaseViewController.swift */,
+				704A3A9B2028624E00FB2C9C /* Product */,
 				704A3A942024391900FB2C9C /* Device */,
 				701011F92011E68400337A98 /* Me */,
 				70606D7720103F88008A7BF1 /* Family */,
@@ -184,6 +185,13 @@
 				704A3A97202439AC00FB2C9C /* BL-Device.storyboard */,
 			);
 			path = Device;
+			sourceTree = "<group>";
+		};
+		704A3A9B2028624E00FB2C9C /* Product */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 		70606D7720103F88008A7BF1 /* Family */ = {

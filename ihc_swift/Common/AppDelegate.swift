@@ -18,8 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         appsdkInit()
         
-        let vc = BLAccountContainerViewController.viewController()
-        window?.rootViewController = vc
+        let userId = BLAccountService.sharedInstance.userId
+        let loginSession = BLAccountService.sharedInstance.loginSession
+        
+        if userId != nil && loginSession != nil {
+            blLet?.account.localLogin(withUsrid: userId!, session: loginSession!, completionHandler: { (result) in
+                BLAccountService.sharedInstance.login()
+            })
+        } else {
+            BLAccountService.sharedInstance.logout()
+        }
+        
+//        let vc = BLAccountContainerViewController.viewController()
+//        window?.rootViewController = vc
         
         return true
     }

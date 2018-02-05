@@ -157,6 +157,7 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
             let familyBtn = UIButton(frame: CGRect(x: 10, y: 15 + 30 * index, width: 80, height: 20))
             familyBtn.tag = 200 + index
             familyBtn.addTarget(self, action: #selector(BLFamilyViewController.buttonClick(_:)), for: UIControlEvents.touchUpInside)
+            //SDK BUG: 后续修改为家庭名称
             familyBtn.setTitle("家庭 \(index)", for: UIControlState.normal)
             familyBtn.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
             

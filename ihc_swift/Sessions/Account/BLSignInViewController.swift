@@ -40,6 +40,9 @@ class BLSignInViewController: BaseViewController {
             print("Login Error:\(result.error) Msg:\(result.msg)")
             SVProgressHUD.dismiss()
             if result.succeed() {
+                // 存储 userId 和 loginSession
+                BLAccountService.sharedInstance.userId = result.userid
+                BLAccountService.sharedInstance.loginSession = result.loginsession
                 // 跳转到主页面
                 BLAccountService.sharedInstance.login()
             }

@@ -49,7 +49,7 @@ class BLDeviceListViewController: BaseViewController, UITableViewDelegate, UITab
         // Do any additional setup after loading the view.
         self.deviceListTableView.delegate = self
         self.deviceListTableView.dataSource = self
-        self.deviceListTableView.rowHeight = 80.0
+        self.deviceListTableView.rowHeight = 70.0
         self.deviceListTableView.tableFooterView = UIView.init()
         
         let notificationName = Notification.Name(kDeviceStatusChangeNotification)
