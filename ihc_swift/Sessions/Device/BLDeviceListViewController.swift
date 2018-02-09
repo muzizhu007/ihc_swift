@@ -45,7 +45,6 @@ class BLDeviceListViewController: BaseViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "设备列表"
         // Do any additional setup after loading the view.
         self.deviceListTableView.delegate = self
         self.deviceListTableView.dataSource = self
@@ -56,6 +55,14 @@ class BLDeviceListViewController: BaseViewController, UITableViewDelegate, UITab
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(updateDeviceView),
                                                name: notificationName, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.hidesBottomBarWhenPushed = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -86,6 +93,7 @@ class BLDeviceListViewController: BaseViewController, UITableViewDelegate, UITab
         }
     }
     
+    //MARK: -- UITableViewDelegate
     func numberOfSections(in tableView: UITableView) -> Int {
         return Array(self.moduleList.keys).count
     }

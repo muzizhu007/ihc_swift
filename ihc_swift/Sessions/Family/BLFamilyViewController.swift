@@ -15,6 +15,8 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
     @IBOutlet weak var moduleCollectionView: UICollectionView!
     
     let timer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
+    var leftVC: UIViewController?
+    var rightVC: UIViewController?
     
     var moduleList : [BLModuleInfo] {
         //只显示设备类型的模块
@@ -40,18 +42,7 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named : "navi_bg"), for: .default)
-        
-        var rightImg = UIImage(named: "icon_add")
-        rightImg = rightImg?.withRenderingMode(.alwaysOriginal)
-        let rightItem = UIBarButtonItem(image: rightImg, style: .plain, target: self, action: #selector(BLFamilyViewController.popRightItemView(_:)))
-        self.navigationItem.rightBarButtonItem = rightItem
-        
-        let flowLayout = UICollectionViewFlowLayout();
-        self.moduleCollectionView.collectionViewLayout = flowLayout
-        self.moduleCollectionView.delegate = self
-        self.moduleCollectionView.dataSource = self
-        
+        self.viewInit()
         self.dispatchTimer_updateFamilyView()
     }
     
@@ -59,9 +50,27 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
         super.viewWillAppear(animated)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        self.hidesBottomBarWhenPushed = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func viewInit() {
+        
+        var rightImg = UIImage(named: "icon_add")
+        rightImg = rightImg?.withRenderingMode(.alwaysOriginal)
+        let rightItem = UIBarButtonItem(image: rightImg, style: .plain, target: self, action: #selector(BLFamilyViewController.popRightItemView(_:)))
+        self.navigationItem.rightBarButtonItem = rightItem
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named : "navi_bg"), for: .default)
+
+        let flowLayout = UICollectionViewFlowLayout();
+        self.moduleCollectionView.collectionViewLayout = flowLayout
+        self.moduleCollectionView.delegate = self
+        self.moduleCollectionView.dataSource = self
     }
     
     //修改左上角显示item
@@ -124,9 +133,9 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
     
     //右上角弹出页面
     @objc private func popRightItemView(_ sender: Any) {
-        let vc = UIViewController()
-        vc.modalPresentationStyle = .popover
-        vc.preferredContentSize = CGSize(width: 100, height: 50)
+        rightVC = UIViewController()
+        rightVC!.modalPresentationStyle = .popover
+        rightVC!.preferredContentSize = CGSize(width: 100, height: 50)
         
         let addDeviceBtn = UIButton(frame: CGRect(x: 10, y: 15, width: 80, height: 20))
         addDeviceBtn.tag = 101
@@ -134,43 +143,42 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
         addDeviceBtn.setTitle("添加设备", for: UIControlState.normal)
         addDeviceBtn.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
         
-        vc.view.addSubview(addDeviceBtn)
+        rightVC!.view.addSubview(addDeviceBtn)
         
-        let ppc = vc.popoverPresentationController
+        let ppc = rightVC!.popoverPresentationController
         ppc?.permittedArrowDirections = .any
         ppc?.delegate = self as UIPopoverPresentationControllerDelegate
         ppc?.barButtonItem = navigationItem.rightBarButtonItem
         ppc?.sourceView = sender as? UIView
         
-        present(vc, animated: true, completion: nil)
+        present(rightVC!, animated: true, completion: nil)
     }
     
     //左上角弹出页面
     @objc private func popLeftItemView(_ sender: Any) {
         let allFamilyIdList = BLFamilyService.sharedInstance.allFamilyInfoList!
-        let vc = UIViewController()
-        vc.modalPresentationStyle = .popover
-        vc.preferredContentSize = CGSize(width: 100, height: 20 + 30 * allFamilyIdList.count)
+        leftVC = UIViewController()
+        leftVC!.modalPresentationStyle = .popover
+        leftVC!.preferredContentSize = CGSize(width: 150, height: 20 + 30 * allFamilyIdList.count)
         
-        for (index, _) in allFamilyIdList.enumerated() {
+        for (index, info) in allFamilyIdList.enumerated() {
             
-            let familyBtn = UIButton(frame: CGRect(x: 10, y: 15 + 30 * index, width: 80, height: 20))
+            let familyBtn = UIButton(frame: CGRect(x: 10, y: 15 + 30 * index, width: 130, height: 20))
             familyBtn.tag = 200 + index
             familyBtn.addTarget(self, action: #selector(BLFamilyViewController.buttonClick(_:)), for: UIControlEvents.touchUpInside)
-            //SDK BUG: 后续修改为家庭名称
-            familyBtn.setTitle("家庭 \(index)", for: UIControlState.normal)
+            familyBtn.setTitle(info.familyName, for: UIControlState.normal)
             familyBtn.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
             
-            vc.view.addSubview(familyBtn)
+            leftVC!.view.addSubview(familyBtn)
         }
         
-        let ppc = vc.popoverPresentationController
+        let ppc = leftVC!.popoverPresentationController
         ppc?.permittedArrowDirections = .any
         ppc?.delegate = self as UIPopoverPresentationControllerDelegate
         ppc?.barButtonItem = navigationItem.leftBarButtonItem
         ppc?.sourceView = sender as? UIView
         
-        present(vc, animated: true, completion: nil)
+        present(leftVC!, animated: true, completion: nil)
     }
     
     //按钮点击事件
@@ -179,11 +187,16 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
         
         switch sender.tag {
         case 101:
-            print("添加设备")
+//            let newVC = BLProductListViewController.viewController()
+            let newVC = BLConfigureProgressViewController.viewController()
+            self.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(newVC, animated: true)
+            self.rightVC?.dismiss(animated: true, completion: nil)
         case 200..<300:
             let index = sender.tag - 200
             BLFamilyService.sharedInstance.currentFamilyId = BLFamilyService.sharedInstance.allFamilyInfoList![index].familyId
             updateFamilyView()
+            self.leftVC?.dismiss(animated: true, completion: nil)
         default:
             break
         }

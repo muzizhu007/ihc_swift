@@ -4,12 +4,12 @@ platform :ios, '11.0'
 use_frameworks!
 
 target 'ihc_swift' do
-    pod 'BLLet/BLLetCore'
-	pod 'Kingfisher', '~> 4.0'
-    pod 'Alamofire', '~> 4.5'
-	pod 'SwiftyJSON'
+    pod 'BLLet/BLLetCore', '~> 2.2.5'
 	pod 'Moya'
+    pod 'RxSwift'
+    pod 'Kingfisher'
     pod 'FSPagerView'
-    pod 'IQKeyboardManagerSwift'
     pod 'SVProgressHUD'
+    pod 'IQKeyboardManagerSwift'
+    pod 'UICircularProgressRing'
 end

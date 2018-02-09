@@ -28,6 +28,16 @@
 		704A3A962024394C00FB2C9C /* BLDeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3A952024394C00FB2C9C /* BLDeviceListViewController.swift */; };
 		704A3A98202439AC00FB2C9C /* BL-Device.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 704A3A97202439AC00FB2C9C /* BL-Device.storyboard */; };
 		704A3A9A2024436500FB2C9C /* BLDeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3A992024436500FB2C9C /* BLDeviceService.swift */; };
+		704A3A9D20298AB200FB2C9C /* BLProductNetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3A9C20298AB200FB2C9C /* BLProductNetworkApi.swift */; };
+		704A3AA02029A34D00FB2C9C /* BLNetworkCommonHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3A9F2029A34D00FB2C9C /* BLNetworkCommonHeader.swift */; };
+		704A3AA22029AC2300FB2C9C /* BLProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3AA12029AC2300FB2C9C /* BLProductListViewController.swift */; };
+		704A3AA42029AC4000FB2C9C /* BL-Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 704A3AA32029AC4000FB2C9C /* BL-Product.storyboard */; };
+		704A3AA6202AFB7F00FB2C9C /* BLDiscPickFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3AA5202AFB7F00FB2C9C /* BLDiscPickFlowLayout.swift */; };
+		704A3AA8202BEC4D00FB2C9C /* BLConfigureProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3AA7202BEC4D00FB2C9C /* BLConfigureProgressViewController.swift */; };
+		704A3AAC202C35DF00FB2C9C /* BLConfigureStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3AAB202C35DF00FB2C9C /* BLConfigureStartViewController.swift */; };
+		704A3AAE202C499D00FB2C9C /* BLConfigureWifiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3AAD202C499D00FB2C9C /* BLConfigureWifiViewController.swift */; };
+		704A3AB0202C49AB00FB2C9C /* BLConfiguringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3AAF202C49AB00FB2C9C /* BLConfiguringViewController.swift */; };
+		704A3AB3202DA48D00FB2C9C /* BLDeviceAddToFamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3AB2202DA48D00FB2C9C /* BLDeviceAddToFamilyViewController.swift */; };
 		70606D7920103FBC008A7BF1 /* BLFamilyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70606D7820103FBC008A7BF1 /* BLFamilyService.swift */; };
 		70606D7B201058C0008A7BF1 /* BLAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70606D7A201058C0008A7BF1 /* BLAccountService.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +67,16 @@
 		704A3A952024394C00FB2C9C /* BLDeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLDeviceListViewController.swift; sourceTree = "<group>"; };
 		704A3A97202439AC00FB2C9C /* BL-Device.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "BL-Device.storyboard"; sourceTree = "<group>"; };
 		704A3A992024436500FB2C9C /* BLDeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLDeviceService.swift; sourceTree = "<group>"; };
+		704A3A9C20298AB200FB2C9C /* BLProductNetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLProductNetworkApi.swift; sourceTree = "<group>"; };
+		704A3A9F2029A34D00FB2C9C /* BLNetworkCommonHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLNetworkCommonHeader.swift; sourceTree = "<group>"; };
+		704A3AA12029AC2300FB2C9C /* BLProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLProductListViewController.swift; sourceTree = "<group>"; };
+		704A3AA32029AC4000FB2C9C /* BL-Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "BL-Product.storyboard"; sourceTree = "<group>"; };
+		704A3AA5202AFB7F00FB2C9C /* BLDiscPickFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLDiscPickFlowLayout.swift; sourceTree = "<group>"; };
+		704A3AA7202BEC4D00FB2C9C /* BLConfigureProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLConfigureProgressViewController.swift; sourceTree = "<group>"; };
+		704A3AAB202C35DF00FB2C9C /* BLConfigureStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLConfigureStartViewController.swift; sourceTree = "<group>"; };
+		704A3AAD202C499D00FB2C9C /* BLConfigureWifiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLConfigureWifiViewController.swift; sourceTree = "<group>"; };
+		704A3AAF202C49AB00FB2C9C /* BLConfiguringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLConfiguringViewController.swift; sourceTree = "<group>"; };
+		704A3AB2202DA48D00FB2C9C /* BLDeviceAddToFamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLDeviceAddToFamilyViewController.swift; sourceTree = "<group>"; };
 		70606D7820103FBC008A7BF1 /* BLFamilyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLFamilyService.swift; sourceTree = "<group>"; };
 		70606D7A201058C0008A7BF1 /* BLAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLAccountService.swift; sourceTree = "<group>"; };
 		8857D69B18D626A2CED7E35E /* Pods-ihc_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ihc_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ihc_swift/Pods-ihc_swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				3BA520C91FAF4EAF00DBB2C8 /* BaseViewController.swift */,
+				704A3A9E2029A32600FB2C9C /* Network */,
 				704A3A9B2028624E00FB2C9C /* Product */,
 				704A3A942024391900FB2C9C /* Device */,
 				701011F92011E68400337A98 /* Me */,
@@ -180,9 +201,15 @@
 		704A3A942024391900FB2C9C /* Device */ = {
 			isa = PBXGroup;
 			children = (
+				704A3AA9202BFB5E00FB2C9C /* View */,
+				704A3A97202439AC00FB2C9C /* BL-Device.storyboard */,
 				704A3A992024436500FB2C9C /* BLDeviceService.swift */,
 				704A3A952024394C00FB2C9C /* BLDeviceListViewController.swift */,
-				704A3A97202439AC00FB2C9C /* BL-Device.storyboard */,
+				704A3AA7202BEC4D00FB2C9C /* BLConfigureProgressViewController.swift */,
+				704A3AAB202C35DF00FB2C9C /* BLConfigureStartViewController.swift */,
+				704A3AAD202C499D00FB2C9C /* BLConfigureWifiViewController.swift */,
+				704A3AAF202C49AB00FB2C9C /* BLConfiguringViewController.swift */,
+				704A3AB2202DA48D00FB2C9C /* BLDeviceAddToFamilyViewController.swift */,
 			);
 			path = Device;
 			sourceTree = "<group>";
@@ -190,8 +217,27 @@
 		704A3A9B2028624E00FB2C9C /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				704A3AA12029AC2300FB2C9C /* BLProductListViewController.swift */,
+				704A3AA32029AC4000FB2C9C /* BL-Product.storyboard */,
 			);
 			path = Product;
+			sourceTree = "<group>";
+		};
+		704A3A9E2029A32600FB2C9C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				704A3A9C20298AB200FB2C9C /* BLProductNetworkApi.swift */,
+				704A3A9F2029A34D00FB2C9C /* BLNetworkCommonHeader.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		704A3AA9202BFB5E00FB2C9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				704A3AA5202AFB7F00FB2C9C /* BLDiscPickFlowLayout.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		70606D7720103F88008A7BF1 /* Family */ = {
@@ -285,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704A3AA42029AC4000FB2C9C /* BL-Product.storyboard in Resources */,
 				3B7D74051FB096EC00E40B1A /* BL-Account.storyboard in Resources */,
 				3BA520B91FAF46AF00DBB2C8 /* LaunchScreen.storyboard in Resources */,
 				3BA520B61FAF46AF00DBB2C8 /* Assets.xcassets in Resources */,
@@ -326,8 +373,9 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -337,8 +385,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -371,17 +420,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				701011FB2011E6B600337A98 /* BLAboutMeViewController.swift in Sources */,
+				704A3AA02029A34D00FB2C9C /* BLNetworkCommonHeader.swift in Sources */,
+				704A3AA22029AC2300FB2C9C /* BLProductListViewController.swift in Sources */,
+				704A3AA6202AFB7F00FB2C9C /* BLDiscPickFlowLayout.swift in Sources */,
 				70606D7920103FBC008A7BF1 /* BLFamilyService.swift in Sources */,
 				704A3A9A2024436500FB2C9C /* BLDeviceService.swift in Sources */,
+				704A3A9D20298AB200FB2C9C /* BLProductNetworkApi.swift in Sources */,
 				3BA520CC1FAF4ED900DBB2C8 /* MainViewController.swift in Sources */,
 				3BA520AF1FAF46AF00DBB2C8 /* AppDelegate.swift in Sources */,
 				704A3A962024394C00FB2C9C /* BLDeviceListViewController.swift in Sources */,
 				701011FD2011E92400337A98 /* BLFamilyViewController.swift in Sources */,
 				3B7D74091FB1E55D00E40B1A /* BLSignInViewController.swift in Sources */,
+				704A3AAE202C499D00FB2C9C /* BLConfigureWifiViewController.swift in Sources */,
+				704A3AA8202BEC4D00FB2C9C /* BLConfigureProgressViewController.swift in Sources */,
 				3B7D74071FB0974D00E40B1A /* BLAccountContainerViewController.swift in Sources */,
+				704A3AB3202DA48D00FB2C9C /* BLDeviceAddToFamilyViewController.swift in Sources */,
 				70606D7B201058C0008A7BF1 /* BLAccountService.swift in Sources */,
 				3BA520CA1FAF4EAF00DBB2C8 /* BaseViewController.swift in Sources */,
+				704A3AB0202C49AB00FB2C9C /* BLConfiguringViewController.swift in Sources */,
 				704A3A7F2021722A00FB2C9C /* BLJSBridge.swift in Sources */,
+				704A3AAC202C35DF00FB2C9C /* BLConfigureStartViewController.swift in Sources */,
 				3B2FB5DA1FB32DDD00753966 /* BLGlobalMacro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,11 +599,9 @@
 					"\"Moya\"",
 					"-framework",
 					"\"Result\"",
-					"-framework",
-					"\"SwiftyJSON\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.econtrol.plus;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.blappsdkdemo.baihk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Appsdk-Brdging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -579,11 +635,9 @@
 					"\"Moya\"",
 					"-framework",
 					"\"Result\"",
-					"-framework",
-					"\"SwiftyJSON\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.econtrol.plus;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.broadlink.blappsdkdemo.baihk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Appsdk-Brdging-Header.h";
 				SWIFT_VERSION = 4.0;
