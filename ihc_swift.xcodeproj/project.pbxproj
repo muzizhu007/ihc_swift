@@ -40,6 +40,8 @@
 		704A3AB3202DA48D00FB2C9C /* BLDeviceAddToFamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A3AB2202DA48D00FB2C9C /* BLDeviceAddToFamilyViewController.swift */; };
 		70606D7920103FBC008A7BF1 /* BLFamilyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70606D7820103FBC008A7BF1 /* BLFamilyService.swift */; };
 		70606D7B201058C0008A7BF1 /* BLAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70606D7A201058C0008A7BF1 /* BLAccountService.swift */; };
+		70D3182120D3AF2C00F910CD /* BLSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D3182020D3AF2C00F910CD /* BLSceneViewController.swift */; };
+		70D3182420D3AFFF00F910CD /* BL-Scene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D3182220D3AF5000F910CD /* BL-Scene.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,8 @@
 		704A3AB2202DA48D00FB2C9C /* BLDeviceAddToFamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLDeviceAddToFamilyViewController.swift; sourceTree = "<group>"; };
 		70606D7820103FBC008A7BF1 /* BLFamilyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLFamilyService.swift; sourceTree = "<group>"; };
 		70606D7A201058C0008A7BF1 /* BLAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLAccountService.swift; sourceTree = "<group>"; };
+		70D3182020D3AF2C00F910CD /* BLSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLSceneViewController.swift; sourceTree = "<group>"; };
+		70D3182220D3AF5000F910CD /* BL-Scene.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "BL-Scene.storyboard"; sourceTree = "<group>"; };
 		8857D69B18D626A2CED7E35E /* Pods-ihc_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ihc_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ihc_swift/Pods-ihc_swift.debug.xcconfig"; sourceTree = "<group>"; };
 		C6963E438FB1EA4E5DC8B3A3 /* Pods-ihc_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ihc_swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ihc_swift/Pods-ihc_swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				3BA520C91FAF4EAF00DBB2C8 /* BaseViewController.swift */,
+				70D3181F20D3AEE900F910CD /* Scene */,
 				704A3A9E2029A32600FB2C9C /* Network */,
 				704A3A9B2028624E00FB2C9C /* Product */,
 				704A3A942024391900FB2C9C /* Device */,
@@ -250,6 +255,15 @@
 			path = Family;
 			sourceTree = "<group>";
 		};
+		70D3181F20D3AEE900F910CD /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				70D3182020D3AF2C00F910CD /* BLSceneViewController.swift */,
+				70D3182220D3AF5000F910CD /* BL-Scene.storyboard */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		7AEECEF69D9C80D1698CB7EE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +353,7 @@
 				701011FF2011EC1300337A98 /* BL-Family.storyboard in Resources */,
 				701012012011EED400337A98 /* BL-Me.storyboard in Resources */,
 				3BA520B41FAF46AF00DBB2C8 /* Main.storyboard in Resources */,
+				70D3182420D3AFFF00F910CD /* BL-Scene.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +447,7 @@
 				701011FD2011E92400337A98 /* BLFamilyViewController.swift in Sources */,
 				3B7D74091FB1E55D00E40B1A /* BLSignInViewController.swift in Sources */,
 				704A3AAE202C499D00FB2C9C /* BLConfigureWifiViewController.swift in Sources */,
+				70D3182120D3AF2C00F910CD /* BLSceneViewController.swift in Sources */,
 				704A3AA8202BEC4D00FB2C9C /* BLConfigureProgressViewController.swift in Sources */,
 				3B7D74071FB0974D00E40B1A /* BLAccountContainerViewController.swift in Sources */,
 				704A3AB3202DA48D00FB2C9C /* BLDeviceAddToFamilyViewController.swift in Sources */,
@@ -579,7 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HY3APXQW82;
+				DEVELOPMENT_TEAM = 5YQ85Q9UV8;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ihc_swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -615,7 +631,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HY3APXQW82;
+				DEVELOPMENT_TEAM = 5YQ85Q9UV8;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ihc_swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

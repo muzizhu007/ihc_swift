@@ -30,13 +30,23 @@ class BLProductListViewController: BaseViewController {
     
     private func getProductCategoryList() {
         let provider = MoyaProvider<BLProductNetworkApi>()
-        provider.request(.categorylist("", [1,3,5,7,9])) { (result) in
+        provider.request(.categorylist("", [1])) { (result) in
             switch result {
             case let .success(moyaResponse):
                 let data = moyaResponse.data
                 let statusCode = moyaResponse.statusCode
+                print("Response code: \(statusCode)")
                 
-                print("Response code: \(statusCode), data: \(data) ")
+                if statusCode == 200 {
+                    let dic = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableLeaves) as! Dictionary<String, Any>
+                    
+                    let error = dic["status"] as! Int
+                    if error == 0 {
+                        print("Success")
+                    } else {
+                        print("Failed Msg: \(String(describing: dic["msg"]!))")
+                    }
+                }
                 
             case .failure(_):
                 break

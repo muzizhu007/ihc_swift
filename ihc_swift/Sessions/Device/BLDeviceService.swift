@@ -123,7 +123,7 @@ class BLDeviceService: NSObject, BLControllerDelegate {
     }
 
     func statusChanged(_ device: BLDNADevice, status: BLDeviceStatusEnum) {
-        print("======================Device Did:\(device.did) state:\(device.state.rawValue)")
+        print("======================Device Did:\(device.did!) state:\(device.state.rawValue)")
         //按照本地扫描到的设备信息为主
         if self.deviceInfoList[device.did] != nil {
             self.deviceInfoList[device.did] = device

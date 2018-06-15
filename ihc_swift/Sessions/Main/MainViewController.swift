@@ -17,6 +17,10 @@ class MainViewController: UITabBarController {
         let fc = UINavigationController(rootViewController: familyVC)
         vc.setTabBarItem(item: fc.tabBarItem, title: "家", image: "tab_home_normal", selected_image: "tab_home_selected")
         
+        let sceneVC = BLSceneViewController.viewController()
+        let sc = UINavigationController(rootViewController: sceneVC)
+        vc.setTabBarItem(item: sc.tabBarItem, title: "场景", image: "tab_scene_normal", selected_image: "tab_scene_selected")
+        
         let deviceVC = BLDeviceListViewController.viewController()
         let dc = UINavigationController(rootViewController: deviceVC)
         vc.setTabBarItem(item: dc.tabBarItem, title: "设备", image: "tab_device_normal", selected_image: "tab_device_selected")
@@ -25,7 +29,7 @@ class MainViewController: UITabBarController {
         let mc = UINavigationController(rootViewController: meVC)
         vc.setTabBarItem(item: mc.tabBarItem, title: "我", image: "tab_me_normal", selected_image: "tab_me_selected")
 
-        let controllers = [fc, dc, mc]
+        let controllers = [fc, sc, dc, mc]
         vc.viewControllers = controllers
         return vc;
     }

@@ -39,7 +39,7 @@ class BLFamilyService: NSObject {
                         self.currentFamilyVersion = familyInfo?.familyVersion
                         needQuery = true
                     } else {
-                        
+                        //遍历家庭信息，查找知道familyId的家庭信息
                         for familyInfo in result.idList {
                             if self.currentFamilyId == familyInfo.familyId {
                                 if self.currentFamilyVersion != familyInfo.familyVersion {
@@ -52,7 +52,7 @@ class BLFamilyService: NSObject {
                     }
                 }
             } else {
-                print("Failed Msg: \(result.msg) Status : \(result.error)")
+                print("Failed Msg: \(result.msg!) Status : \(result.error)")
             }
             idComplated(result.succeed(), result.msg, needQuery)
         }
@@ -72,7 +72,7 @@ class BLFamilyService: NSObject {
                 
                 BLDeviceService.sharedInstance.updateLocalDevices()
             } else {
-                print("Failed Msg: \(result.msg) Status : \(result.error)")
+                print("Failed Msg: \(result.msg!) Status : \(result.error)")
             }
             infoComplated(result.succeed(), result.msg)
         }

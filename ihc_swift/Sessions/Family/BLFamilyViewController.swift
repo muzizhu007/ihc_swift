@@ -12,6 +12,7 @@ import Kingfisher
 
 class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate, UIPopoverPresentationControllerDelegate {
 
+    //MARK: -- 成员变量定义
     @IBOutlet weak var moduleCollectionView: UICollectionView!
     
     let timer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
@@ -33,11 +34,18 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
         return tmp
     }
     
+    //MARK: -- 类方法
+    
+    /// 获取本ViewController
+    ///
+    /// - Returns: BLFamilyViewController实例
     class func viewController() -> BLFamilyViewController {
         let vc = UIStoryboard.init(name: "BL-Family", bundle: nil).instantiateViewController(withIdentifier: "BLFamilyViewController")
         
         return vc as! BLFamilyViewController;
     }
+    
+    //MARK: -- 重写方法
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +67,9 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: -- 私有方法
+    
+    //页面初始化
     private func viewInit() {
         
         var rightImg = UIImage(named: "icon_add")
@@ -73,11 +84,13 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
         self.moduleCollectionView.dataSource = self
     }
     
-    //修改左上角显示item
-    private func updateLeftBarItem() {
-        let leftItem = UIBarButtonItem(title: BLFamilyService.sharedInstance.familyBaseInfo?.familyName, style: UIBarButtonItemStyle.plain, target: self, action: #selector(BLFamilyViewController.popLeftItemView(_:)))
-        leftItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:UIColor.white], for: UIControlState.normal)
-        self.navigationItem.leftBarButtonItem = leftItem
+    //定时10s更新UI
+    private func dispatchTimer_updateFamilyView() {
+        self.timer.schedule(deadline: .now(), repeating: 10)
+        self.timer.setEventHandler {
+            self.updateFamilyView()
+        }
+        self.timer.activate()
     }
     
     //更新家庭信息页面
@@ -91,14 +104,12 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
             }
         }
     }
-    
-    //定时10s更新UI
-    private func dispatchTimer_updateFamilyView() {
-        self.timer.schedule(deadline: .now(), repeating: 10)
-        self.timer.setEventHandler {
-            self.updateFamilyView()
-        }
-        self.timer.activate()
+
+    //修改左上角显示item
+    private func updateLeftBarItem() {
+        let leftItem = UIBarButtonItem(title: BLFamilyService.sharedInstance.familyBaseInfo?.familyName, style: UIBarButtonItemStyle.plain, target: self, action: #selector(BLFamilyViewController.popLeftItemView(_:)))
+        leftItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:UIColor.white], for: UIControlState.normal)
+        self.navigationItem.leftBarButtonItem = leftItem
     }
     
     //删除指定item的模块
@@ -187,8 +198,7 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
         
         switch sender.tag {
         case 101:
-//            let newVC = BLProductListViewController.viewController()
-            let newVC = BLConfigureProgressViewController.viewController()
+            let newVC = BLProductListViewController.viewController()
             self.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(newVC, animated: true)
             self.rightVC?.dismiss(animated: true, completion: nil)
@@ -202,6 +212,8 @@ class BLFamilyViewController: BaseViewController, UICollectionViewDelegate, UICo
         }
         
     }
+    
+    //MARK -- 代理方法
     
     //每个分区的内边距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

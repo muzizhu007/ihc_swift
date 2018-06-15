@@ -4,7 +4,7 @@ platform :ios, '11.0'
 use_frameworks!
 
 target 'ihc_swift' do
-    pod 'BLLet/BLLetCore', '~> 2.2.5'
+    pod 'BLLet/BLLetCore', '~> 2.5'
 	pod 'Moya'
     pod 'RxSwift'
     pod 'Kingfisher'
